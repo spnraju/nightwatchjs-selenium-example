@@ -4,7 +4,7 @@
   "description": "NightwatchJS with Selenium Server",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch",
+    "test": "nightwatch -e headlessChrome",
     "headless": "nightwatch -e headlessChrome",
     "chrome": "nightwatch -e chrome",
     "firefox": "nightwatch -e firefox",
