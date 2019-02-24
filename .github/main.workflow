@@ -1,6 +1,6 @@
 workflow "OnPush" {
-  on = "push"
   resolves = ["npm test"]
+  on = "pull_request"
 }
 
 action "Npm Install" {
