@@ -11,6 +11,7 @@ module.exports = {
       .waitForElementVisible('input[type=password]', 3000)
       .setValue('input[type=password]', 'mercury')
       .click('input[type=image]')
+      .pause(5000)
       .end();
   }
 };
