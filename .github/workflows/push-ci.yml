@@ -1,18 +1,14 @@
 name: ci
-on: [push, pull_request]
+on: [push]
 
 jobs:
   chromeHeadLess: 
     name: Chrome Headless
     runs-on: windows-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
-    - name: NPM Install
-      uses: actions/npm@master
-      args: install
-    - name: NPM Test
-      uses: actions/npm@master
-      args: test
-      needs: NPM Install
-  
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        version: 10.x 
+    - run: npm install
+    - run: npm test
