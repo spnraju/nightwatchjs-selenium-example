@@ -1,0 +1,34 @@
+name: ci
+on: [push]
+
+jobs:
+  chromeHeadLess: 
+    name: Chrome Headless
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        version: 10.x
+    - run: npm install
+    - run: npm test
+  firefox: 
+    name: Firefox
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        version: 10.x
+    - run: npm install
+    - run: npm run firefox
+  Chrome: 
+    name: Chrome
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        version: 10.x
+    - run: npm install
+    - run: npm run chrome
