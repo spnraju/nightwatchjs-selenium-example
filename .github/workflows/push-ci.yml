@@ -22,8 +22,8 @@ jobs:
         version: 10.x
     - run: npm install
     - run: npm run firefox
-  Edge: 
-    name: Edge
+  Chrome: 
+    name: Chrome
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@master
@@ -31,4 +31,4 @@ jobs:
       with:
         version: 10.x
     - run: npm install
-    - run: npm run edge
+    - run: npm run chrome
