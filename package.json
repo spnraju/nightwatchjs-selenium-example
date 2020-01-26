@@ -10,7 +10,8 @@
     "firefox": "nightwatch -e firefox",
     "edge": "nightwatch -e edge",
     "ie": "nightwatch -e ie",
-    "all": "nightwatch -e headlessChrome,chrome,firefox,edge,ie"
+    "all": "nightwatch -e headlessChrome,chrome,firefox,edge,ie",
+    "update": "npx npm-check-updates -u && npm install"
   },
   "repository": {
     "type": "git",
